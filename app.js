@@ -4,20 +4,21 @@ import { checkResult } from './get-random-throw.js';
 
 const playButton = document.getElementById('play-button');
 const gameResults = document.getElementById('results');
+const currentTotal = document.getElementById('current-total');
 
 // initialize state
 let win = 0;
 let draw = 0;
 let lose = 0;
-let totalGuesses = 0;
+let totalGuesses = 1;
 
 // set event listeners to update state and DOM
 playButton.addEventListener('click', () => {
     console.log('hello');
 
     //if total guesses is 3, end game
-    if (totalGuesses === 3) {
-        return 'Great Game!';
+    if (totalGuesses === 4) {
+        return;
     }
 
     //generate random number
@@ -28,7 +29,7 @@ playButton.addEventListener('click', () => {
     const userGuess = userInput.value;
     console.log(userGuess);
 
-    totalGuesses++;
+    currentTotal.textContent = totalGuesses++;
     console.log(totalGuesses);
 
     //compare inputs & add points
