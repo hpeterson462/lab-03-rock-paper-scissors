@@ -7,9 +7,9 @@ const gameResults = document.getElementById('results');
 const currentTotal = document.getElementById('current-total');
 
 // initialize state
-let win = 0;
-let draw = 0;
-let lose = 0;
+let winData = 0;
+let drawData = 0;
+let loseData = 0;
 let totalGuesses = 0;
 
 // set event listeners to update state and DOM
@@ -30,18 +30,17 @@ playButton.addEventListener('click', () => {
     console.log(userGuess);
 
     currentTotal.textContent = totalGuesses++;
-    console.log(totalGuesses);
 
     //compare inputs & add points
     if (checkResult() === 'draw') {
-        draw++;
+        drawData++;
         gameResults.textContent = 'Draw';
     } else if (checkResult() === 'win') {
-        win++;
+        winData++;
         gameResults.textContent = 'Win!';
     } else if (checkResult() === 'lose') {
-        lose++;
+        loseData++;
         gameResults.textContent = 'Lose';
     }
-
+    console.log(checkResult());
 });
