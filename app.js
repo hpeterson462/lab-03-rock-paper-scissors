@@ -1,5 +1,48 @@
 // import functions and grab DOM elements
+import { getRandomThrow } from './get-random-throw.js';
+import { checkResult } from './get-random-throw.js';
+
+const playButton = document.getElementById('play-button');
+const gameResults = document.getElementById('results');
 
 // initialize state
+let win = 0;
+let draw = 0;
+let lose = 0;
+let totalGuesses = 0;
 
 // set event listeners to update state and DOM
+playButton.addEventListener('click', () => {
+    console.log('hello');
+
+    //if total guesses is 3, end game
+    if (totalGuesses === 3) {
+        return 'Great Game!';
+    }
+
+    //generate random number
+    getRandomThrow();
+
+    //get user input
+    const userInput = document.querySelector('input:checked');
+    const userGuess = userInput.value;
+    console.log(userGuess);
+
+    totalGuesses++;
+    console.log(totalGuesses);
+
+    //compare inputs & add points
+    if (checkResult() === 'draw') {
+        draw++;
+        document.getElementById('results').textContent = 'Draw';
+    } else if (checkResult() === 'win') {
+        win++;
+        document.getElementById('results').textContent = 'Win!';
+    } else {
+        lose++;
+        document.getElementById('results').textContent = 'Lose';
+    }
+
+    //display results
+
+})
