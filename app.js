@@ -10,7 +10,7 @@ const currentTotal = document.getElementById('current-total');
 let win = 0;
 let draw = 0;
 let lose = 0;
-let totalGuesses = 1;
+let totalGuesses = 0;
 
 // set event listeners to update state and DOM
 playButton.addEventListener('click', () => {
@@ -35,15 +35,13 @@ playButton.addEventListener('click', () => {
     //compare inputs & add points
     if (checkResult() === 'draw') {
         draw++;
-        document.getElementById('results').textContent = 'Draw';
+        gameResults.textContent = 'Draw';
     } else if (checkResult() === 'win') {
         win++;
-        document.getElementById('results').textContent = 'Win!';
-    } else {
+        gameResults.textContent = 'Win!';
+    } else if (checkResult() === 'lose') {
         lose++;
-        document.getElementById('results').textContent = 'Lose';
+        gameResults.textContent = 'Lose';
     }
 
-    //display results
-
-})
+});
