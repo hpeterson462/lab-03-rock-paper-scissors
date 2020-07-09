@@ -48,7 +48,9 @@ p {
     display: flex;
     justify-content: center;
     text-align: center;
-
+    line-height: 30px;
+    margin: 20px;
+    padding: 10px;
 }
 
 img {
@@ -63,6 +65,11 @@ img:hover {
 
 input {
     display: none;
+}
+
+span {
+    margin: 20px;
+    padding: 10px;
 }
 
 header {
@@ -81,7 +88,7 @@ button {
     justify-content: center;
     align-items: center;
     margin: 20px;
-    padding: 10px;
+    padding: 20px;
     border-radius: 5px;
     background-color: var(--color3);
     font-family: 'Varela Round', sans-serif;
@@ -99,26 +106,6 @@ footer {
     background-color: var(--color3);
     box-shadow: var(--shadow);
 }
-
-
-h2 {
-    font-size: 1.8rem;
-    font-weight: bold;
-}
-
-.gutter-right {
-    margin-right: 20px;
-}
-
-.main-logo {
-    animation: pulse 5s infinite ease-in-out;
-}
-
-header img {
-    height: var(--header-height);
-}
-
-
 
 content {
     width: 80%;

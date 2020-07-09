@@ -1,6 +1,6 @@
 // import functions and grab DOM elements
-import { getRandomThrow } from './get-random-throw.js';
-import { checkResult } from './get-random-throw.js';
+import { getRandomThrow } from './r-p-s.js';
+import { checkResult } from './r-p-s.js';
 
 const playButton = document.getElementById('play-button');
 const gameResults = document.getElementById('results');
