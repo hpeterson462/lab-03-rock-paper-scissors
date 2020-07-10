@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/home.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        Rock, Paper, Scissors
+    </header>
+    <main>
+        <p>See if you can win! <br />Rock wins Scissors, Paper wins Rock, Scissors wins Paper. <br />
+            Select<br />and<br />Press
+            Play!</p>
+        <button id="play-button">Play</button>
+        <section>
+            <label>
+                <p>Rock</p>
+                <input id="rock" type="radio" name="rps" value="rock"></input>
+                <img src="https://maxcdn.icons8.com/Share/icon/p1em/Hands/hand_rock1600.png" alt="rock">
+
+            </label>
+            <label>
+                <p>Paper</p>
+                <input id="paper" type="radio" name="rps" value="paper"></input>
+                <img src="https://cdn1.iconfinder.com/data/icons/hand-icon/1792/hand-paper-512.png" alt=" paper">
+            </label>
+            <label>
+                <p>Scissors</p>
+                <input id="scissors" type="radio" name="rps" value="scissors"></input>
+                <img src="https://maxcdn.icons8.com/Share/icon/p1em/Hands/hand_scissors1600.png" alt=" scissors">
+            </label>
+        </section>
+        <br>
+        <br>
+        <span id="results"></span>
+        <span id="current-total"></span>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
