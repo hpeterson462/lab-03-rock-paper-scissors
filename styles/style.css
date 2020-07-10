@@ -136,5 +136,8 @@ footer {
     80% {
         transform: rotate3d(10, 10, 10, 50deg) scale(1);
     }
+  }
 
+  input:checked + img {
+    border: solid gold 3px;
   }
